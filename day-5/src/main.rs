@@ -22,14 +22,22 @@ fn main() {
 
 
 fn part_1(input: &str) {
-    for i in 0..STACKS {
-        println!("{}",i*4+1); 
+    parse_input(input);
+}
+
+fn parse_input(input: &str) {
+    for (_i, c) in input.chars().enumerate() {
+        println!("{}", c);
     }
 }
 
+fn parse_char(input: &char) {
+
+}
 
 fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
 where P: AsRef<Path>, {
     let file = File::open(filename)?;
     Ok(io::BufReader::new(file).lines())
 }
+
